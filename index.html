@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPS Multiplayer</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="assetts/css/style.css" rel="stylesheet">
+</head>
+<header>
+    <h1>RPS Multiplayer</h1>
+</header>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-6" id="playerInput">
+                <input type="text" id="name-input" placeholder="Enter Player Name">
+                <input id="add-name" type="submit" value="Start">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <div class="playerPanel" id="playerPanel1">
+                    <div>
+                        <h3 id="player1Name"></h3>
+                    </div>
+            
+                    <button id="player1Rock" class="option">
+                        <div>Rock</div>
+                    </button>
+            
+                    <button id="player1Paper" class="option">
+                        <div>Paper</div>
+                    </button>
+            
+                    <button id="player1Scissors" class="option">
+                        <div>Scissors</div>
+                    </button>
+                    <div>
+                        <div id="player1Wins"></div>
+                        <div id="player1Losses"></div>
+                        <div id="player1Ties"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="gamePanel">
+                    <h3 id="waitingNotice"></h3>
+                    <h3 id="roundOutcome"></h3>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="playerPanel" id="playerPanel2">
+                    <div>
+                        <h3 id="player2Name"></h3>
+                    </div>
+            
+                   <button id="player2Rock" class="option">
+                        <div>Rock</div>
+                    </button>
+            
+                    <button id="player2Paper" class="option">
+                        <div>Paper</div>
+                    </button>
+            
+                    <button id="player2Scissors" class="option">
+                        <div>Scissors</div>
+                    </button>
+            
+                    <div>
+                        <div id="player2Wins"></div>
+                        <div id="player2Losses"></div>
+                        <div id="player2Ties"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="chat">
+            <div class="row">
+                <div class="col-12">
+                    <div>
+                        <div>Chat room</div>
+                        <div class="chatPanel">
+                            <form>
+                                <textarea type="text" id="input"></textarea>
+                                <input id="send" type="submit" value="Send">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.9.3/firebase.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.1/moment.min.js"></script>
+<script type="text/javascript" src="assetts/js/app.js"></script>
+</html>
