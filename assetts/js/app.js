@@ -43,10 +43,6 @@ $(document).ready(function () {
             $("#waitingNotice").html("");
             $("#player1Stats").html("Win: 0, Loss: 0, Tie: 0");
         }
-        
-        if (!player1 || !player2) {
-            $("#chat").hide();
-        }
 
         if (snapshot.child("player2").exists()) {
 
@@ -73,7 +69,8 @@ $(document).ready(function () {
         if (player1 && player2) {
             $("#playerPanel1").addClass("playerPanelTurn");
             $("#playerInput").empty()
-            $("#chat").show();
+            $("#chatContainer").show();
+            console.log("Chat showing")
             $("#waitingNotice").html("Waiting on " + player1Name + " to choose an option");
         }
 
@@ -87,6 +84,11 @@ $(document).ready(function () {
             $("#playerPanel2").removeClass("playerPanelTurn");
             $("#roundOutcome").html("");
             $("#waitingNotice").html("");
+        }
+
+        if (!player1 || !player2) {
+            $("#chatContainer").hide();
+            console.log("Chat hidden")
         }
     });
     database.ref("/players/").on("child_removed", function (snapshot) {
